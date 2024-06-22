@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Members Only! - Member Trial</title>
+</head>
+<body>
+  <h1>Trial</h1>
+  <% if (errors) { for (const error in errors) {%>
+    <h3><%= errors[error].msg %></h3>
+  <%}}%>
+  <form action="" method="POST">
+    <input name="trial" placeholder="Enter secret password here" type="text" />
+    <button>Submit</button>
+  </form>
+</body>
+</html>

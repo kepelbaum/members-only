@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Members Only! - Admin's Post Delete Page</title>
+  <style>
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    button {
+        background-color: red;
+        color: white;
+    }
+
+    form {
+        background-color: azure;
+        border: 2px solid black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Delete Post</h1>
+  <% if (errors) { for (const error in errors) {%>
+    <h3><%= errors[error].msg %></h3>
+  <%}}%>
+  <form action="" method="POST" class="form">
+    <h2>Posted By: <%= post.username %></h2>
+    <h3>on: <%= post.date %></h3>
+    <p><%= post.content %></p>
+    <div class="button"><button>Delete!</button></div>
+  </form>
+</body>
+</html>

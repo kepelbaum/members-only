@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Members Only! - Sign Up</title>
+</head>
+<body>
+  <h1>Sign Up</h1>
+  <% if (errors) { for (const error in errors) {%>
+    <h3><%= errors[error].msg %></h3>
+  <%}}%>
+  <form action="" method="POST">
+    <label for="username">Username</label>
+    <input name="username" placeholder="username" type="text" />
+    <label for="firstname">First Name</label>
+    <input name="firstname" type="text" />
+    <label for="lastname">Last Name</label>
+    <input name="lastname" type="text" />
+    <label for="password">Password</label>
+    <input name="password" type="password" />
+    <label for="confirm">Confirm Password</label>
+    <input name="confirm" type="password" />
+    <button>Sign Up</button>
+  </form>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Members Only! - New Message</title>
+  <style>
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    input {
+        width: 500px;
+        height: 200px;
+    }
+
+    textarea {
+        height: 300px;
+        width: 500px;
+    }
+
+    button {
+        margin: 30px 45%;
+        background-color: orange;
+        color: black;
+    }
+  </style>
+</head>
+<body>
+  <h1>New Message</h1>
+  <% if (errors) { for (const error in errors) {%>
+    <h3><%= errors[error].msg %></h3>
+  <%}}%>
+  <form action="" method="POST" class="form">
+    <textarea name="message" cols="50"></textarea>
+    <div class="button"><button>Submit</button></div>
+  </form>
+</body>
+</html>
