@@ -251,5 +251,14 @@ passport.use(
     res.redirect("/");
   })); 
   
+let portvar;
 
-app.listen(3000, () => console.log("app listening on port 3000!"));
+if (process.env.PORT) {
+  portvar = process.env.PORT;
+}
+
+else {
+  portvar = 3000;
+}
+
+app.listen(portvar, () => console.log("app listening on port " + portvar + "!"));
